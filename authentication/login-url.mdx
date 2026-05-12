@@ -1,0 +1,61 @@
+---
+title: "Login URL"
+description: "Configure a login endpoint in ApyGuard so the platform can authenticate dynamically and retrieve tokens during scanning."
+sidebarTitle: "Login URL"
+---
+
+## Overview
+
+Login URL authentication allows ApyGuard to log in using a real API endpoint, retrieve a token from the response, and then use that token for protected endpoint testing.
+
+## Configure Login URL in ApyGuard
+
+1. Go to **Start Scan → Authorization Settings**.
+2. Create a new authorization setting.
+3. Choose **Login URL**.
+4. Enter a descriptive **Authorization Setting Name**.
+5. Configure token format and token location.
+6. Select the login endpoint from the detected login URL list.
+7. Review the detected endpoint parameters.
+8. Choose the **Username Parameter** and **Password Parameter**.
+9. Save the authorization setting and use it during authenticated scans.
+
+## Best fit
+
+Use this method when:
+
+- Your API exposes a dedicated login endpoint
+- Tokens are issued dynamically after successful authentication
+- You want scanning to use the same login flow as the application
+
+## Setup flow
+
+<CardGroup cols={2}>
+  <Card title="Login URL selector" icon="link">
+    ApyGuard shows detected login endpoints from the selected collection so the user can choose the real authentication route.
+  </Card>
+
+  <Card title="Parameter mapping" icon="list-filter">
+    Users select which endpoint parameters carry the username and password values for the login request.
+  </Card>
+</CardGroup>
+
+## What to verify
+
+- The correct login endpoint is selected
+- Username and password parameter mapping is accurate
+- The API response contains a token ApyGuard can use
+- Token placement matches the protected endpoints
+
+## Common pitfalls
+
+- Wrong parameter mapping
+- Wrong token location
+- Login endpoint requires extra parameters not configured in the flow
+- Credentials are valid in one environment but not another
+
+## Related pages
+
+- [Predefined Token](/authentication/predefined-token)
+- [Authorization Matrix](/authentication/authorization-matrix)
+- [Authentication Issues](/authentication/authentication-issues)

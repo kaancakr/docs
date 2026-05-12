@@ -1,0 +1,113 @@
+---
+title: "Authentication Setup"
+description: "Configure authentication in ApyGuard so scans can test protected endpoints accurately using token, login-based, OIDC, and OAuth2 flows."
+sidebarTitle: "Overview"
+---
+
+## Overview
+
+Authentication configuration allows ApyGuard to test protected endpoints using the same access patterns your applications, users, and integrations rely on.
+
+## Supported methods
+
+<CardGroup cols={2}>
+  <Card title="Predefined Token" icon="badge-check" href="/authentication/predefined-token">
+    Use an existing token such as an API key or bearer token.
+  </Card>
+
+  <Card title="Login URL" icon="log-in" href="/authentication/login-url">
+    Use a login endpoint to authenticate dynamically and retrieve tokens during scanning.
+  </Card>
+
+  <Card title="OIDC" icon="shield-check" href="/authentication/oidc">
+    Use OpenID Connect metadata from the selected server to configure authentication.
+  </Card>
+
+  <Card title="OAuth2 Password" icon="user-check" href="/authentication/oauth2-password">
+    Use client credentials together with a username and password for supported password grant flows.
+  </Card>
+
+  <Card title="OAuth2 Client Credentials" icon="key-round" href="/authentication/oauth2-client-credentials">
+    Use machine-to-machine OAuth2 flows with client ID and client secret.
+  </Card>
+
+  <Card title="Authorization Matrix" icon="table-properties" href="/authentication/authorization-matrix">
+    Define role-based expectations for endpoint access behavior.
+  </Card>
+</CardGroup>
+
+## Configure authentication in ApyGuard
+
+Authentication is configured from the authorization setting flow used during scan setup.
+
+1. Go to **Start Scan → Authorization Settings**.
+2. Create a new authorization setting or edit an existing one.
+3. Enter an **Authorization Setting Name**.
+4. Choose the authentication method that matches your API.
+5. Configure token behavior.
+6. Add or select the credentials needed for the chosen flow.
+7. Review any detected server metadata for OIDC or OAuth2.
+8. Save the authorization setting and use it in the scan.
+
+## What the authorization flow includes
+
+<CardGroup cols={2}>
+  <Card title="Authentication method cards" icon="layout-grid">
+    ApyGuard lets users choose between Predefined Token, Login URL, OIDC, OAuth2 Password, and OAuth2 Client Credentials.
+  </Card>
+
+  <Card title="Token configuration" icon="badge-check">
+    Users define token format and token location so ApyGuard knows how to place the authenticated value in requests.
+  </Card>
+
+  <Card title="Credential selection" icon="user-round-check">
+    The auth setting links to one or more saved credentials depending on the selected flow.
+  </Card>
+
+  <Card title="Server-aware detection" icon="radar">
+    OIDC and OAuth2 methods can pull configuration details from the selected API server and let users review them before saving.
+  </Card>
+</CardGroup>
+
+## Token configuration in the UI
+
+ApyGuard asks users to define:
+
+- **Token Implementation Format**
+- **Token Location**
+
+The UI also offers quick token format examples such as:
+
+- `Authorization: Bearer {TOKEN}`
+- `Authorization: Basic {TOKEN}`
+- `X-API-Key: {TOKEN}`
+
+## Credential and server selection
+
+Depending on the auth method, users may also need to:
+
+- Select one or more saved credentials
+- Select an API server
+- Choose a login endpoint
+- Map username and password parameters
+- Review detected provider metadata
+
+## When to choose each method
+
+- **Predefined Token** when you already have a valid token or API key
+- **Login URL** when the API issues tokens after a login request
+- **OIDC** when your provider exposes OpenID Connect discovery metadata
+- **OAuth2 Password** when your provider supports password grant
+- **OAuth2 Client Credentials** when a machine identity requests tokens directly
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="OIDC" icon="shield-check" href="/authentication/oidc">
+    Configure OpenID Connect authentication using detected provider metadata.
+  </Card>
+
+  <Card title="Authentication Issues" icon="triangle-alert" href="/authentication/authentication-issues">
+    Troubleshoot token, login, OIDC, and OAuth2 setup issues.
+  </Card>
+</CardGroup>

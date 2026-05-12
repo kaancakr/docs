@@ -1,0 +1,82 @@
+---
+title: "OIDC"
+description: "Configure OpenID Connect authentication in ApyGuard using detected provider metadata and an OIDC credential record."
+sidebarTitle: "OIDC"
+---
+
+## Overview
+
+Use OIDC when your identity provider exposes OpenID Connect discovery metadata and your API relies on that provider for authentication.
+
+## Configure OIDC in ApyGuard
+
+1. Go to **Start Scan → Authorization Settings**.
+2. Create a new authorization setting.
+3. Choose **OIDC**.
+4. Enter a descriptive **Authorization Setting Name**.
+5. Configure token format and token location.
+6. Select the API server connected to the identity provider.
+7. Let ApyGuard detect the OIDC configuration automatically.
+8. Review the detected values and edit them if needed.
+9. Create or select the matching OIDC credential.
+10. Save the authorization setting.
+
+## What ApyGuard detects
+
+When you select the API server, ApyGuard can detect metadata such as:
+
+- Issuer
+- Authorization endpoint
+- Token endpoint
+- Introspection endpoint
+- Supported scopes
+- Supported grant types
+- Token endpoint authentication methods
+- ID token signing algorithms
+- Response types
+- Supported claims
+
+## What users see in the UI
+
+<CardGroup cols={2}>
+  <Card title="Server selection" icon="server">
+    Users must select a server before ApyGuard can detect OIDC metadata.
+  </Card>
+
+  <Card title="Detect Again action" icon="refresh-cw">
+    ApyGuard includes a `Detect Again` button so users can refresh provider metadata when needed.
+  </Card>
+
+  <Card title="Editable metadata fields" icon="file-pen-line">
+    Detected OIDC values are shown in editable fields so users can review or adjust them before saving.
+  </Card>
+
+  <Card title="OIDC credential pairing" icon="key-round">
+    The authorization setting should be paired with a credential that contains the client ID, client secret, and requested scopes.
+  </Card>
+</CardGroup>
+
+## When to review manually
+
+You should review detected values when:
+
+- The server belongs to a new environment
+- The provider has been reconfigured
+- The supported scopes differ from expected production behavior
+- The token endpoint or issuer does not match your provider setup
+
+## Recommended scopes
+
+Many OIDC providers expect scopes such as:
+
+- `openid`
+- `profile`
+- `email`
+
+Use only the scopes needed for the API testing context.
+
+## Related pages
+
+- [OAuth2 Password](/authentication/oauth2-password)
+- [OAuth2 Client Credentials](/authentication/oauth2-client-credentials)
+- [Authentication Issues](/authentication/authentication-issues)

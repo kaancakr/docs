@@ -1,0 +1,308 @@
+---
+title: "Create Your First Asset"
+---
+
+## Overview
+
+Assets in ApyGuard represent your APIs, applications, or servers that you want to monitor and secure. Creating an asset is the first step in setting up security scanning for your API infrastructure.
+
+## Prerequisites
+
+Before creating an asset, ensure you have:
+
+- **API Specification**: OpenAPI/Swagger specification or Postman collection
+- **Valid Account**: Active ApyGuard account (Free, Basic, Professional, or Enterprise)
+- **API Access**: Your API endpoints should be accessible for scanning
+
+## Step-by-Step Guide
+
+### 1. Navigate to Asset Creation
+
+1. **Access Dashboard**: Log into your ApyGuard account
+2. **Go to Assets**: Click on "Assets" in the main navigation
+3. **Create Asset**: Click the "Create Asset" button
+
+### 2. Basic Information
+
+Fill in the essential details about your asset:
+
+#### Asset Name
+
+- **Purpose**: Choose a descriptive name that identifies your API
+- **Examples**: "Payment Gateway API", "User Management Service", "E-commerce API"
+- **Best Practice**: Use consistent naming conventions across your organization
+
+#### Environment
+
+- **Options**: Production, Staging, Development, Testing
+- **Purpose**: Helps organize assets by deployment environment
+- **Recommendation**: Create separate assets for different environments
+
+#### Description
+
+- **Content**: Describe the purpose and key features of your API
+- **Include**: Main functionality, target users, integration points
+- **Example**: "REST API for processing online payments with support for multiple payment methods"
+
+<Frame>
+  ![Create Asset Form](/images/create-asset-form.png)
+</Frame>
+
+### 3. API Specification
+
+Choose how to provide your API specification:
+
+#### Option A: OpenAPI Specification
+
+**Supported Formats**:
+
+- OpenAPI 3.0 (YAML/JSON)
+- Swagger 2.0 (YAML/JSON)
+- Specification files (.json, .yaml, .yml)
+
+**Import Methods**:
+
+1. **URL Import**:
+   - **URL Field**: Enter the URL to your API specification
+   - **Examples**:
+     - `https://api.example.com/swagger.json`
+     - `https://petstore.swagger.io/v2/swagger.json`
+   - **Verification**: Click "Check Endpoints" to verify the URL and count endpoints
+2. **File Upload**:
+   - **Upload Area**: Drag and drop or click to browse files
+   - **Supported Files**: .json, .yaml, .yml
+   - **File Size**: Maximum file size limits apply
+   - **Processing**: Files are uploaded and processed automatically
+
+<Frame>
+  ![Create Asset Specification](/images/create-asset-specification.png)
+</Frame>
+
+#### Option B: Postman Collection (Pro\+ Plans)
+
+**Setup Requirements**:
+
+- Postman API Key
+- Postman Workspace ID
+- Active Postman account
+
+**Integration Steps**:
+
+1. **Connect Postman**: Click "Connect Postman" if not already connected
+2. **Provide Credentials**: Enter your Postman API key and workspace ID
+3. **Select Collection**: Choose from your available Postman collections
+4. **Verify Collection**: Review collection details and endpoints
+
+### 4. Endpoint Verification
+
+After importing your specification:
+
+#### Endpoint Count
+
+- **Display**: Shows the total number of endpoints found
+- **Free Plan**: Limited to 20 random endpoints
+- **Paid Plans**: All endpoints included
+
+#### Verification Process
+
+1. **Check Endpoints**: Click to verify the specification is valid
+2. **Review Count**: Confirm the number of endpoints matches expectations
+3. **Plan Limits**: Understand any limitations based on your plan
+
+<Frame>
+  ![Create Asset Endpoints](/images/create-asset-endpoints.png)
+</Frame>
+
+### 5. Asset Creation
+
+#### Final Review
+
+- **Information**: Verify all basic information is correct
+- **Specification**: Confirm the right API specification is selected
+- **Endpoints**: Review the endpoint count and coverage
+
+#### Create Asset
+
+1. **Submit**: Click "Create Asset" to finalize
+2. **Processing**: Asset is created and endpoints are imported
+3. **Success**: Redirected to asset details or dashboard
+
+## Best Practices
+
+### Asset Organization
+
+#### Naming Conventions
+
+- **Consistent Format**: Use consistent naming across your organization
+- **Environment Prefix**: Include environment in asset names
+- **Service Identification**: Clearly identify the service or API
+
+#### Environment Management
+
+- **Separate Assets**: Create separate assets for different environments
+- **Environment Tags**: Use environment tags for better organization
+- **Access Control**: Limit access to production assets
+
+### Specification Management
+
+#### Keep Updated
+
+- **Regular Updates**: Update specifications when APIs change
+- **Version Control**: Use version control for specification files
+- **Automation**: Automate specification updates where possible
+
+#### Quality Assurance
+
+- **Validate Specifications**: Ensure specifications are valid and complete
+- **Test Endpoints**: Verify endpoints are accessible and functional
+- **Documentation**: Maintain up-to-date API documentation
+
+### Security Considerations
+
+#### Access Control
+
+- **Team Permissions**: Set appropriate team member permissions
+- **Environment Access**: Limit production access to authorized users
+- **Audit Logs**: Monitor asset creation and modification
+
+#### Data Protection
+
+- **Sensitive Information**: Avoid including sensitive data in specifications
+- **Test Data**: Use test data for development and staging
+- **Encryption**: Ensure specifications are transmitted securely
+
+## Troubleshooting
+
+### Common Issues
+
+#### Import Failures
+
+**Invalid Specification**:
+
+- **Symptom**: Error during import or validation
+- **Solution**: Validate your OpenAPI/Swagger specification
+- **Tools**: Use online validators or Swagger Editor
+
+**File Format Issues**:
+
+- **Symptom**: Unsupported file format error
+- **Solution**: Convert to supported format (JSON/YAML)
+- **Check**: Ensure file extension matches content
+
+**URL Access Issues**:
+
+- **Symptom**: Cannot access specification URL
+- **Solution**: Verify URL is accessible and returns valid specification
+- **Alternative**: Use file upload instead
+
+#### Postman Integration Issues
+
+**Authentication Problems**:
+
+- **Symptom**: Cannot connect to Postman
+- **Solution**: Verify API key and workspace ID
+- **Check**: Ensure Postman account has proper permissions
+
+**Collection Access**:
+
+- **Symptom**: Cannot see collections
+- **Solution**: Check workspace permissions and collection visibility
+- **Verify**: Ensure collections are not private or restricted
+
+#### Endpoint Count Issues
+
+**Unexpected Count**:
+
+- **Symptom**: Endpoint count doesn't match expectations
+- **Cause**: Specification may include internal or deprecated endpoints
+- **Solution**: Review and clean up specification
+
+**Free Plan Limitations**:
+
+- **Symptom**: Only 20 endpoints available
+- **Solution**: Upgrade to paid plan for full endpoint access
+- **Alternative**: Focus on critical endpoints for free plan
+
+### Performance Optimization
+
+#### Large Specifications
+
+**Processing Time**:
+
+- **Issue**: Long processing times for large specifications
+- **Solution**: Break large APIs into smaller, focused specifications
+- **Optimization**: Remove unused or deprecated endpoints
+
+**Memory Usage**:
+
+- **Issue**: High memory usage during import
+- **Solution**: Process specifications in smaller chunks
+- **Monitoring**: Monitor system resources during import
+
+## Advanced Features
+
+### Asset Templates
+
+**Predefined Templates**:
+
+- **Common APIs**: Templates for common API types
+- **Industry Standards**: Templates following industry best practices
+- **Custom Templates**: Create reusable templates for your organization
+
+### Bulk Import
+
+**Multiple Assets**:
+
+- **Batch Processing**: Import multiple specifications at once
+- **Automation**: Use API for automated asset creation
+- **Validation**: Bulk validation of specifications
+
+### Asset Cloning
+
+**Duplicate Assets**:
+
+- **Environment Copying**: Clone assets for different environments
+- **Template Creation**: Use existing assets as templates
+- **Configuration Reuse**: Reuse authentication and scan settings
+
+## Integration Options
+
+### API Integration
+
+**Programmatic Creation**:
+
+- **REST API**: Use ApyGuard's API to create assets
+- **Automation**: Integrate with CI/CD pipelines
+- **Monitoring**: Automatically create assets for new services
+
+### Third-Party Tools
+
+**Specification Sources**:
+
+- **GitHub**: Import from GitHub repositories
+- **Swagger Hub**: Connect to Swagger Hub collections
+- **API Management**: Integrate with API management platforms
+
+## Support and Resources
+
+### Documentation
+
+- **API Reference**: Complete API documentation
+- **Examples**: Sample specifications and configurations
+- **Tutorials**: Step-by-step guides and videos
+
+### Community
+
+- **Forums**: User community and discussions
+- **Best Practices**: Shared knowledge and experiences
+- **Templates**: Community-contributed templates
+
+### Support
+
+- **Help Center**: Comprehensive help documentation
+- **Contact Support**: Direct support for technical issues
+- **Feature Requests**: Suggest new features and improvements
+
+---
+
+_Creating assets is the foundation of your security monitoring strategy. Take time to set up assets correctly for the best security coverage and results._

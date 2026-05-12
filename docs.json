@@ -1,14 +1,14 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "almond",
-  "name": "Product Guide",
-  "description": "Step-by-step guides for every product—platform setup, analytics, and integrations in one place.",
+  "name": "ApyGuard Docs",
+  "description": "Documentation for onboarding, core workflows, and authentication in ApyGuard.",
   "colors": {
     "primary": "#166E3F",
     "light": "#26BD6C",
     "dark": "#166E3F"
   },
-  "favicon": "/favicon.ico",
+  "favicon": "/favicon.png",
   "icons": {
     "library": "lucide"
   },
@@ -27,71 +27,98 @@
           "href": "/"
         },
         {
-          "anchor": "Changelog",
-          "icon": "scroll-text",
-          "href": "https://www.mintlify.com/docs/changelog"
-        },
-        {
-          "anchor": "Help",
-          "icon": "life-buoy",
-          "href": "https://www.mintlify.com/docs/contact-support"
+          "anchor": "Documentation",
+          "icon": "book-open",
+          "href": "/get-started/introduction"
         }
       ]
     },
     "directory": "card",
     "groups": [
       {
-        "group": "Platform",
-        "icon": "layers",
+        "group": "Documentation",
+        "icon": "book-open",
         "expanded": true,
         "pages": [
-          "platform/quickstart",
-          "platform/key-concepts",
-          "platform/configuration/settings",
-          "platform/configuration/user-management",
-          "platform/administration/roles-permissions"
-        ]
-      },
-      {
-        "group": "Analytics",
-        "icon": "chart-bar",
-        "expanded": true,
-        "pages": [
-          "analytics/quickstart",
-          "analytics/connect-data",
-          "analytics/dashboards/create-dashboard",
-          "analytics/reports/scheduled-reports"
-        ]
-      },
-      {
-        "group": "Integrations",
-        "icon": "plug",
-        "expanded": true,
-        "pages": [
-          "integrations/quickstart",
-          "integrations/authentication",
-          "integrations/connectors/crm",
-          "integrations/webhooks/configure"
+          {
+            "group": "Get Started",
+            "icon": "rocket",
+            "pages": [
+              "get-started/introduction",
+              "get-started/quick-start",
+              "get-started/create-your-first-asset",
+              "get-started/import-collection",
+              "get-started/security-scanning"
+            ]
+          },
+          {
+            "group": "Core Workflows",
+            "icon": "shield",
+            "pages": [
+              "core-workflows/assets",
+              "core-workflows/api-collections",
+              "core-workflows/authorization-settings",
+              "core-workflows/credentials",
+              "core-workflows/scheduled-scan-tasks"
+            ]
+          },
+          {
+            "group": "Authentication",
+            "icon": "key-round",
+            "pages": [
+              "authentication/overview",
+              "authentication/predefined-token",
+              "authentication/login-url",
+              "authentication/oidc",
+              "authentication/oauth2-password",
+              "authentication/oauth2-client-credentials",
+              "authentication/authorization-matrix",
+              "authentication/authentication-issues"
+            ]
+          },
+          {
+            "group": "Findings & Results",
+            "icon": "bug",
+            "pages": [
+              "findings-results/overview",
+              "findings-results/understanding-results",
+              "findings-results/vulnerabilities",
+              "findings-results/sensitive-data-findings",
+              "findings-results/risk-scores",
+              "findings-results/compliance-reporting"
+            ]
+          },
+          {
+            "group": "Monitoring & Posture",
+            "icon": "chart-line",
+            "pages": [
+              "monitoring-and-posture/api-security-posture",
+              "monitoring-and-posture/posture-tracking",
+              "monitoring-and-posture/scan-history",
+              "monitoring-and-posture/alerts-and-notifications"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "icon": "plug",
+            "pages": [
+              "integrations/overview",
+              "integrations/github-actions",
+              "integrations/jira",
+              "integrations/postman",
+              "integrations/slack"
+            ]
+          }
         ]
       }
     ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/apyguard.png",
+    "dark": "/logo/apyguard.png"
   },
   "navbar": {
-    "links": [],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
+    "links": []
   },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/yourcompany",
-      "linkedin": "https://linkedin.com/company/yourcompany"
-    }
-  }
+  "footer": {}
 }

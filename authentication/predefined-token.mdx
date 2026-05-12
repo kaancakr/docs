@@ -1,0 +1,65 @@
+---
+title: "Predefined Token"
+description: "Use an existing API key, bearer token, or similar credential in ApyGuard for protected endpoint testing."
+sidebarTitle: "Predefined Token"
+---
+
+## Overview
+
+Predefined Token is the simplest authentication method in ApyGuard. You provide a token that already works, and ApyGuard includes it in requests based on the format and location you configure.
+
+## Configure Predefined Token in ApyGuard
+
+1. Go to **Start Scan → Authorization Settings**.
+2. Create a new authorization setting.
+3. Choose **Predefined Token** from the authentication method cards.
+4. Enter a descriptive **Authorization Setting Name**.
+5. Configure the token format.
+6. Select the token location.
+7. Link the credential you want to use for the scan if your workflow requires it.
+8. Save the authorization setting.
+
+## Best fit
+
+Use this method when:
+
+- You already have a valid API key or bearer token
+- The token is stable enough for the scan window
+- You do not need ApyGuard to log in dynamically
+
+## What you configure
+
+- Authorization setting name
+- Token format
+- Token location
+- Credential record if the team wants to store access details clearly
+
+## What users see in the UI
+
+<CardGroup cols={2}>
+  <Card title="Token format field" icon="text-cursor-input">
+    Users enter the exact request format ApyGuard should use, such as `Authorization: Bearer {TOKEN}`.
+  </Card>
+
+  <Card title="Token location selector" icon="map-pin">
+    Users choose where the token belongs in the request, such as header, query, cookie, or body.
+  </Card>
+</CardGroup>
+
+## Common examples
+
+- `Authorization: Bearer {TOKEN}`
+- `X-API-Key: {TOKEN}`
+- `Cookie: session={TOKEN}`
+
+## Tips
+
+- Confirm the token is still valid before starting a scan
+- Match token location to the actual API expectation
+- Use clear names so teams know which token belongs to which environment
+
+## Related pages
+
+- [Login URL](/authentication/login-url)
+- [Security Scanning](/get-started/security-scanning)
+- [Authentication Issues](/authentication/authentication-issues)

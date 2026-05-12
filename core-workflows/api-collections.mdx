@@ -1,0 +1,40 @@
+---
+title: "API Collections"
+description: "Organize imported API specifications and collections in ApyGuard so scanning, authentication, and endpoint selection stay structured."
+sidebarTitle: "API Collections"
+---
+
+## Overview
+
+API collections give ApyGuard the endpoint-level structure it needs for testing and analysis. They define the routes, operations, and request shapes that scans can use.
+
+<CardGroup cols={2}>
+  <Card title="Specification import" icon="file-json">
+    Bring in OpenAPI, Swagger, or Postman collections as the source of truth for endpoint discovery.
+  </Card>
+
+  <Card title="Endpoint organization" icon="network">
+    Review the imported API surface before deciding how broadly to scan.
+  </Card>
+
+  <Card title="Authentication mapping" icon="lock">
+    Pair collections with the right authorization settings so protected endpoints can be tested accurately.
+  </Card>
+
+  <Card title="Scan targeting" icon="crosshair">
+    Choose which endpoints belong in each testing workflow instead of scanning everything blindly.
+  </Card>
+</CardGroup>
+
+## Good collection hygiene
+
+- Re-import after API changes
+- Split collections by service or environment when needed
+- Remove stale definitions that no longer match production behavior
+- Review detected login endpoints and sensitive paths carefully
+
+## Related pages
+
+- [Assets](/core-workflows/assets)
+- [Authorization Settings](/core-workflows/authorization-settings)
+- [Security Scanning](/get-started/security-scanning)

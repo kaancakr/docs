@@ -1,0 +1,55 @@
+---
+title: "Assets"
+description: "Learn how assets organize API environments in ApyGuard and act as the foundation for collections, authentication, scanning, and results."
+sidebarTitle: "Assets"
+---
+
+## Overview
+
+Assets are the top-level containers for the APIs you want to manage in ApyGuard. They help you separate environments, organize ownership, and keep scanning and findings tied to the right API surface.
+
+<CardGroup cols={2}>
+  <Card title="Environment boundary" icon="server">
+    Represent development, staging, or production APIs as separate assets when their behavior or access controls differ.
+  </Card>
+
+  <Card title="Security context" icon="shield-check">
+    Keep authentication settings, scan configuration, and findings associated with the correct API environment.
+  </Card>
+
+  <Card title="Team visibility" icon="users">
+    Help engineering and security teams understand which API belongs to which product or environment.
+  </Card>
+
+  <Card title="Workflow anchor" icon="anchor">
+    Use the asset as the starting point for importing collections, configuring authentication, and launching scans.
+  </Card>
+</CardGroup>
+
+## What an asset typically includes
+
+- Asset name
+- Environment
+- Description
+- Linked API collections
+- Authentication and credential context
+- Scan history and findings
+
+## Best practices
+
+- Create separate assets when environments behave differently
+- Use clear names such as `Payments API - Staging`
+- Keep asset descriptions specific to the service and owner
+- Review assets after major API or environment changes
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="API Collections" icon="library" href="/core-workflows/api-collections">
+    Import and organize the API definitions associated with an asset.
+  </Card>
+
+  <Card title="Authorization Settings" icon="key" href="/core-workflows/authorization-settings">
+    Configure access methods for protected endpoints under the asset.
+  </Card>
+</CardGroup>

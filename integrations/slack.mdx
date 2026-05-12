@@ -1,0 +1,53 @@
+---
+title: "Slack"
+description: "Use Slack with ApyGuard to improve visibility and collaboration around API security findings and updates."
+sidebarTitle: "Slack"
+---
+
+## Overview
+
+Slack integration helps teams share visibility around findings, scan activity, and follow-up work inside communication workflows they already use.
+
+<CardGroup cols={2}>
+  <Card title="Team awareness" icon="message-square">
+    Make it easier for teams to stay informed about important security events.
+  </Card>
+
+  <Card title="Operational collaboration" icon="users">
+    Improve coordination between engineering and security through shared visibility.
+  </Card>
+</CardGroup>
+
+## Connect Slack from the ApyGuard integrations panel
+
+1. Go to **Settings → Integrations**.
+2. Open the **Communication** tab.
+3. Find the **Slack** card.
+4. Click **Connect first** or turn the toggle on.
+5. In the ApyGuard dialog, click **Continue with Slack**.
+6. ApyGuard redirects you to Slack so you can choose the workspace and approve the requested permissions.
+7. After approval, Slack redirects you back to ApyGuard.
+8. Return to the integrations panel and confirm the Slack card now shows **Connected**.
+   <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7454540695672905728?compact=1" height="399" width="504" frameborder="0" allowfullscreen="" title="Gömülü gönderi" />
+
+## What ApyGuard does during setup
+
+<CardGroup cols={2}>
+  <Card title="OAuth redirect" icon="arrow-right-left">
+    ApyGuard requests an OAuth URL from the backend and redirects the user to Slack to complete authorization.
+  </Card>
+
+  <Card title="Return to the panel" icon="undo-2">
+    After the Slack approval step finishes, ApyGuard refreshes the integration state and shows the connection result in the integrations panel.
+  </Card>
+</CardGroup>
+
+## Re-enable or disable Slack
+
+- If Slack is already integrated but currently disabled, turning the toggle on enables it again without repeating the full OAuth flow.
+- To disable Slack, turn the toggle off in the integrations panel.
+
+## Related pages
+
+- [Integrations Overview](/integrations/overview)
+- [Alerts & Notifications](/monitoring-and-posture/alerts-and-notifications)

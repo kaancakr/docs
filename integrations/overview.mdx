@@ -1,0 +1,77 @@
+---
+title: "Integrations Overview"
+description: "Connect ApyGuard with delivery, issue tracking, and API tooling to bring security workflows into existing team processes."
+sidebarTitle: "Overview"
+---
+
+## Overview
+
+Integrations help teams bring ApyGuard into their broader engineering and security workflow.
+
+<CardGroup cols={2}>
+  <Card title="Delivery workflows" icon="git-branch-plus">
+    Connect ApyGuard to release and delivery processes where security validation matters.
+  </Card>
+
+  <Card title="Issue tracking" icon="tickets">
+    Push findings into issue management workflows for follow-up and remediation.
+  </Card>
+
+  <Card title="API ecosystem tooling" icon="plug">
+    Keep security work connected to the tools teams already use to manage APIs.
+  </Card>
+
+  <Card title="Operational collaboration" icon="messages-square">
+    Reduce friction between security and engineering by connecting systems together.
+  </Card>
+</CardGroup>
+
+## Where to connect integrations in ApyGuard
+
+All integrations are managed from the ApyGuard integrations panel.
+
+1. Open **Settings** in the dashboard.
+2. Go to **Integrations**.
+3. Choose the category tab that matches the provider, such as **CI/CD**, **Communication**, or **Development**.
+4. Find the integration card you want to connect.
+5. Use either the toggle or the action button on the card:
+   - **Connect first** opens the setup dialog
+   - **Configure** opens the setup or follow-up flow
+   - Turning the toggle on enables the integration
+   - Turning the toggle off disables the integration
+
+## How the integration cards behave
+
+<CardGroup cols={2}>
+  <Card title="Disconnected state" icon="plug-zap">
+    A disconnected integration shows a `Connect first` action. Selecting it opens the provider-specific setup dialog.
+  </Card>
+
+  <Card title="Connected state" icon="badge-check">
+    A connected integration shows `Connected` and can usually be disabled with the toggle. Some integrations also expose a `Configure` action for follow-up steps.
+  </Card>
+
+  <Card title="Credential dialogs" icon="file-input">
+    Jira, GitHub, GitLab, and Postman require connection details inside an ApyGuard dialog before the integration can be enabled.
+  </Card>
+
+  <Card title="OAuth flow" icon="key-round">
+    Slack uses an OAuth flow. ApyGuard redirects the user to Slack for approval and then returns to the integrations page after authorization.
+  </Card>
+</CardGroup>
+
+## Typical connection flow
+
+1. Open **Settings → Integrations**.
+2. Click **Connect first** on the integration card.
+3. Enter the required credentials or continue through OAuth.
+4. Finish the dialog flow and return to the integrations panel.
+5. Confirm the card now shows **Connected**.
+6. Use the toggle later if you need to disable the integration without fully removing its configuration.
+
+## Available topics
+
+- [GitHub Actions](/integrations/github-actions)
+- [Jira](/integrations/jira)
+- [Postman](/integrations/postman)
+- [Slack](/integrations/slack)

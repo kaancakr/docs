@@ -1,0 +1,52 @@
+---
+title: "Authentication Issues"
+description: "Resolve common authentication setup problems in ApyGuard, including token issues, login misconfiguration, and OIDC or OAuth2 errors."
+sidebarTitle: "Authentication Issues"
+---
+
+## Common issues
+
+## Tokens are not applied correctly
+
+Check:
+
+- Token format
+- Token location
+- Header or parameter naming
+- Whether the token is still valid
+
+## Login URL flow does not work
+
+Check:
+
+- Selected login endpoint
+- Username parameter mapping
+- Password parameter mapping
+- Response structure used for token extraction
+
+## OIDC detection is incomplete
+
+Check:
+
+- Selected server
+- Provider discovery endpoint availability
+- Issuer and token endpoint values
+- Supported scopes and grant types
+
+## OAuth2 flow fails
+
+Check:
+
+- Client ID
+- Client secret
+- Username and password for password grant
+- Requested scopes
+- Provider token endpoint
+- Supported grant types
+
+## Best practices
+
+- Use real working credentials when practical
+- Keep roles and descriptions explicit
+- Re-check authentication after API or identity provider changes
+- Use the auth method that matches real environment behavior

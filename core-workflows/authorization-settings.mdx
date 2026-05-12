@@ -1,0 +1,60 @@
+---
+title: "Authorization Settings"
+description: "Create and manage authorization settings in ApyGuard to control how scans authenticate and evaluate protected API behavior."
+sidebarTitle: "Authorization Settings"
+---
+
+## Overview
+
+Authorization settings define how ApyGuard gains access to protected endpoints during testing. They connect authentication method, token behavior, credentials, and role-based expectations into one reusable configuration.
+
+<CardGroup cols={2}>
+  <Card title="Method selection" icon="list-checks">
+    Choose the auth flow that matches your API, such as Predefined Token, Login URL, OIDC, or OAuth2.
+  </Card>
+
+  <Card title="Token behavior" icon="badge-check">
+    Define token format and where the token should appear in requests.
+  </Card>
+
+  <Card title="Credential linking" icon="user-round-check">
+    Attach the credential records needed to authenticate successfully.
+  </Card>
+
+  <Card title="Role-aware testing" icon="table-properties">
+    Support authorization matrix testing for different access levels and API behaviors.
+  </Card>
+</CardGroup>
+
+## Typical setup flow
+
+1. Create a new authorization setting.
+   <Frame>
+     ![Screenshot 2026 05 12 At 10 10 40](/images/Screenshot-2026-05-12-at-10.10.40.png)
+   </Frame>
+2. Choose the correct authentication method.
+   <Frame>
+     ![Screenshot 2026 05 12 At 10 10 47](/images/Screenshot-2026-05-12-at-10.10.47.png)
+   </Frame>
+3. Add or select credentials.
+   <Frame>
+     ![Screenshot 2026 05 12 At 10 11 10](/images/Screenshot-2026-05-12-at-10.11.10.png)
+   </Frame>
+4. Configure token format and token location.
+   <Frame>
+     ![Screenshot 2026 05 12 At 10 18 25](/images/Screenshot-2026-05-12-at-10.18.25.png)
+   </Frame>
+5. Review server-detected metadata for OIDC or OAuth2 flows.
+   <Frame>
+     ![Screenshot 2026 05 12 At 10 11 10](/images/Screenshot-2026-05-12-at-10.11.10.png)
+   </Frame>
+6. Adjust authorization matrix for your discovered endpoints
+   <Frame>
+     ![Screenshot 2026 05 12 At 10 18 39](/images/Screenshot-2026-05-12-at-10.18.39.png)
+   </Frame>
+
+## Related pages
+
+- [Authentication Overview](/authentication/overview)
+- [Credentials](/core-workflows/credentials)
+- [Login URL](/authentication/login-url)

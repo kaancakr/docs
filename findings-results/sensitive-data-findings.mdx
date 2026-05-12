@@ -1,0 +1,39 @@
+---
+title: "Sensitive Data Findings"
+description: "Understand sensitive data findings in ApyGuard and use them to reduce exposure risk across API responses."
+sidebarTitle: "Sensitive Data Findings"
+---
+
+## Overview
+
+Sensitive data findings help teams identify API responses or payload behaviors that may expose information beyond what should be returned or stored.
+
+<CardGroup cols={2}>
+  <Card title="Exposure detection" icon="eye">
+    Identify where APIs return data that may create privacy or compliance risk.
+  </Card>
+
+  <Card title="Response review" icon="file-search">
+    Investigate which endpoints and flows are responsible for the exposure.
+  </Card>
+
+  <Card title="Scope awareness" icon="target">
+    Understand whether exposure is broad, role-specific, or limited to a certain path.
+  </Card>
+
+  <Card title="Remediation planning" icon="wrench">
+    Use the finding context to tighten response handling and data access behavior.
+  </Card>
+</CardGroup>
+
+## Common follow-up actions
+
+- Reduce unnecessary fields in responses
+- Tighten authorization checks
+- Revisit test data returned by endpoints
+- Re-scan after response handling changes
+
+## Related pages
+
+- [Understanding Results](/understanding-results)
+- [Compliance Reporting](/compliance-reporting)
