@@ -19,7 +19,7 @@ mode: frame
       title={<span className="product-guide-feature-card-title">Get Started</span>}
       icon="rocket"
       href="/get-started/introduction"
-      className="product-guide-feature-card"
+      className="product-guide-feature-card product-guide-feature-card-onboarding"
       size={64}
     >
       <span className="product-guide-feature-card-description">Start with the basic setup and first actions in ApyGuard.</span>
@@ -29,7 +29,7 @@ mode: frame
       title={<span className="product-guide-feature-card-title">Core Workflows</span>}
       icon="shield"
       href="/core-workflows/assets"
-      className="product-guide-feature-card"
+      className="product-guide-feature-card product-guide-feature-card-workflows"
       size={64}
     >
       <span className="product-guide-feature-card-description">Document assets, collections, credentials, and scheduled scans.</span>
@@ -39,7 +39,7 @@ mode: frame
       title={<span className="product-guide-feature-card-title">Authentication</span>}
       icon="key-round"
       href="/authentication/overview"
-      className="product-guide-feature-card"
+      className="product-guide-feature-card product-guide-feature-card-auth"
       size={64}
     >
       <span className="product-guide-feature-card-description">Explain the supported authentication flows and token options.</span>
@@ -49,12 +49,12 @@ mode: frame
   <hr className="border-0 border-t border-border" />
 
   <div className="flex flex-col gap-4">
-    <h2 className="font-serif text-xl font-medium leading-normal text-gray-900 dark:text-gray-50">Start writing</h2>
+    <h2 className="font-serif text-xl font-medium leading-normal text-gray-900 dark:text-gray-50">Start from scratch</h2>
 
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
       <a
         href="/get-started/quick-start"
-        className="rounded-2xl flex flex-col gap-4 border bg-gray-50 p-4 outline-none shadow-sm shadow-gray-950/5 transition hover:border-primary hover:shadow-md dark:bg-gray-950 dark:shadow-black/20 dark:hover:border-primary"
+        className="product-guide-resource-card product-guide-resource-card-quick-start"
       >
         <Icon icon="zap" color="rgb(var(--primary))" size={18} className="shrink-0" />
         <div className="flex flex-col gap-1">
@@ -66,7 +66,7 @@ mode: frame
       </a>
       <a
         href="/get-started/create-your-first-asset"
-        className="rounded-2xl flex flex-col gap-4 border bg-gray-50 p-4 outline-none shadow-sm shadow-gray-950/5 transition hover:border-primary hover:shadow-md dark:bg-gray-950 dark:shadow-black/20 dark:hover:border-primary"
+        className="product-guide-resource-card product-guide-resource-card-asset"
       >
         <Icon icon="box" color="rgb(var(--primary))" size={18} className="shrink-0" />
         <div className="flex flex-col gap-1">
@@ -78,7 +78,7 @@ mode: frame
       </a>
       <a
         href="/get-started/import-collection"
-        className="rounded-2xl flex flex-col gap-4 border bg-gray-50 p-4 outline-none shadow-sm shadow-gray-950/5 transition hover:border-primary hover:shadow-md dark:bg-gray-950 dark:shadow-black/20 dark:hover:border-primary"
+        className="product-guide-resource-card product-guide-resource-card-import"
       >
         <Icon icon="file-input" color="rgb(var(--primary))" size={18} className="shrink-0" />
         <div className="flex flex-col gap-1">
@@ -90,7 +90,7 @@ mode: frame
       </a>
       <a
         href="/get-started/security-scanning"
-        className="rounded-2xl flex flex-col gap-4 border bg-gray-50 p-4 outline-none shadow-sm shadow-gray-950/5 transition hover:border-primary hover:shadow-md dark:bg-gray-950 dark:shadow-black/20 dark:hover:border-primary"
+        className="product-guide-resource-card product-guide-resource-card-scanning"
       >
         <Icon icon="scan-search" color="rgb(var(--primary))" size={18} className="shrink-0" />
         <div className="flex flex-col gap-1">
@@ -102,7 +102,7 @@ mode: frame
       </a>
       <a
         href="/core-workflows/scheduled-scan-tasks"
-        className="rounded-2xl flex flex-col gap-4 border bg-gray-50 p-4 outline-none shadow-sm shadow-gray-950/5 transition hover:border-primary hover:shadow-md dark:bg-gray-950 dark:shadow-black/20 dark:hover:border-primary"
+        className="product-guide-resource-card product-guide-resource-card-scheduled"
       >
         <Icon icon="calendar-clock" color="rgb(var(--primary))" size={18} className="shrink-0" />
         <div className="flex flex-col gap-1">
@@ -114,7 +114,7 @@ mode: frame
       </a>
       <a
         href="/authentication/predefined-token"
-        className="rounded-2xl flex flex-col gap-4 border bg-gray-50 p-4 outline-none shadow-sm shadow-gray-950/5 transition hover:border-primary hover:shadow-md dark:bg-gray-950 dark:shadow-black/20 dark:hover:border-primary"
+        className="product-guide-resource-card product-guide-resource-card-token"
       >
         <Icon icon="key" color="rgb(var(--primary))" size={18} className="shrink-0" />
         <div className="flex flex-col gap-1">

@@ -84,8 +84,7 @@
               "findings-results/understanding-results",
               "findings-results/vulnerabilities",
               "findings-results/sensitive-data-findings",
-              "findings-results/risk-scores",
-              "findings-results/compliance-reporting"
+              "findings-results/risk-scores"
             ]
           },
           {
@@ -118,7 +117,17 @@
     "dark": "/logo/apyguard.png"
   },
   "navbar": {
-    "links": []
+    "links": [
+      {
+        "label": "Help",
+        "href": "https://apyguard.com"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Open app",
+      "href": "https://app.apyguard.com"
+    }
   },
   "footer": {}
 }
